@@ -1,0 +1,1436 @@
+@font-face {
+  font-family: Mosk300;
+  src: url('../font/Mosk-300.ttf');
+}
+@font-face {
+  font-family: Mosk400;
+  src: url('../font/Mosk-400.ttf');
+}
+@font-face {
+  font-family: Mosk700;
+  src: url('../font/Mosk-Bold.ttf');
+}
+
+
+#carousel-cards .owl-stage {
+  align-items: flex-start !important;
+}
+/* Inconcert common styles  */
+.ic-class-form-link {
+  color: var(--blanco);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.ic-class-form-button-submit.btn.btn-success, .ic-class-form-button-submit.btn.btn-success:hover {
+  background: var(--rojo);
+  border: 0px solid transparent;
+}
+input[type=checkbox], input[type=radio] {
+  margin-right: 10px;
+}
+.ic-class-form-label.label-tag {
+  display: none;
+}
+.form-check-label {
+  font-size: 14px !important;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 3px;
+  background-color: var(--rojo);
+  border-radius: 10px;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.overlay {
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  display: none;
+  opacity: 0;
+  z-index: 101;
+  height: 100vh;
+  width: 100%;
+}
+
+.overlay:target {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+
+
+.fa.fa-close {
+  position: absolute;
+  z-index: 200;
+  color: var(--rojo);
+  font-size: 24px;
+  right: 20px;
+  top: 10px;
+  cursor: pointer;
+}
+
+#contenedor-titulo {
+  margin-top: -70%
+}
+
+#carousel-banner {
+  background-image: url('../img/banner-derecho-movil.png') ;
+  height: 60vh !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#phone-input {
+  margin-bottom: 20px;
+}
+
+#popup-form {
+  display: none !important;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--gris);
+  z-index: 101;
+}
+
+#popup-form.active {
+  display: block !important;
+}
+
+
+.popup {
+  margin: 5vh auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h4 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 32px !important;
+}
+
+.popup .close {
+  position: absolute;
+  z-index: 102;
+  top: 5px;
+  right: 5px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--negro);
+}
+
+.popup .close:hover {
+  color: var(--rojo) !important;
+}
+
+.popup .content {
+  height: 60vh;
+  overflow-y: scroll;
+}
+
+.popup .content::-webkit-scrollbar {
+  width: 0px;
+}
+
+.perfil-subitems::before {
+  content: "•";
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: -10px;
+}
+
+.perfil-subitems {
+  margin-left: 10px;
+  position: relative;
+}
+
+
+
+input {
+  border-radius: 0 !important;
+  outline: 0 !important;
+}
+
+/* Mobile query */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 100%;
+}
+
+#si-c .bg-gris {
+  border-radius: 5px !important;
+}
+
+body, p {
+  font-size: 12px;
+  font-family: Mosk400 !important;
+}
+
+
+
+header {
+  position: sticky !important;
+  top: 0;
+  z-index: 100;
+  background: #FFFFFF;
+}
+
+/* Colores */
+:root {
+  --blanco: #ffffff;
+  --negro: #000000;
+  --negro-carousel: #1E1E1E;
+  --gris: #4C4C4C;
+  --gris-claro: #D9D9D9;
+  --gris-texto: #A2A2A2;
+  --verde: #6CBDB1;
+  --verde-wa: #199E0F;
+  --azul: #57BFE6;
+  --azul-medio: #006AAA;
+  --azul-oscuro: #003E63;
+  --dorado: #D48200;
+  --rojo: #E9004C;
+  --degrade: linear-gradient(90deg, #b60A44, #190072, #3677ff) !important;
+}
+
+
+
+.negro-carousel {
+  color: var(--negro-carousel);
+}
+
+.btn-ucss {
+  border-radius: 10px;
+
+}
+
+
+.btn:hover,
+.btn-cta:hover {
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.blanco {
+  color: var(--blanco);
+}
+
+.negro {
+  color: var(--negro);
+}
+
+.gris-claro {
+  color: var(--gris-claro);
+}
+
+.gris {
+  color: var(--gris) !important;
+}
+
+.gris-texto {
+  color: var(--gris-texto);
+}
+
+.verde {
+  color: var(--verde);
+}
+
+.rojo {
+  color: var(--rojo);
+}
+
+.azul {
+  color: var(--azul);
+}
+
+.azul-medio {
+  color: var(--azul-medio);
+}
+
+.azul-oscuro {
+  color: var(--azul-oscuro);
+}
+
+.rojo {
+  color: var(--rojo);
+}
+
+.dorado {
+  color: var(--dorado);
+}
+
+.bg-blanco {
+  background: var(--blanco);
+}
+
+.bg-negro {
+  background: var(--negro);
+}
+
+.bg-gris {
+  background: var(--gris);
+}
+
+.bg-gris-claro {
+  background: var(--gris-claro);
+}
+
+.bg-verde {
+  background: var(--verde);
+}
+
+.bg-verde-wa {
+  background: var(--verde-wa);
+}
+
+.bg-rojo {
+  background: var(--rojo);
+}
+
+.bg-azul {
+  background: var(--azul);
+}
+
+.bg-azul-medio {
+  background: var(--azul-medio);
+}
+
+.bg-azul-oscuro {
+  background: var(--azul-oscuro);
+}
+
+.bg-rojo {
+  background: var(--rojo);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Mosk700 !important ;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 120% !important;
+}
+
+.bg-dorado {
+  background: var(--dorado);
+}
+
+.btn {
+  border-radius: 10px;
+}
+
+#wa-fixed {
+  position: fixed;
+  right: 2%;
+  bottom: 3%;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 300;
+  font-size: 48px;
+}
+#brochure-fixed {
+  position: fixed;
+  right: 2%;
+  bottom: 16%;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 300;
+
+}
+
+.dashed-bottom {
+  border-bottom: 1px solid var(--verde);
+  border-bottom-style: dashed;
+}
+
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+/* Carousel styles */
+.bb-azul {
+  border-bottom: 25px solid var(--azul);
+}
+
+.owl-stage {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Form styles */
+
+
+/* Descripcion  programa*/
+.desc-programa {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  z-index: 99;
+  font-size: calc(1em + 1vw);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.desc-programa .online {
+  float: left;
+}
+
+.desc-programa h1 {
+  font-size: 48px !important;
+}
+
+.w-49:not(:nth-child(5)) {
+  width: 100%;
+}
+
+.btn-enviar {
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.logo-blanco {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+
+.online {
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+/* cards solicitar informe */
+
+
+.card-desc {
+  border: 3px solid var(--verde);
+  border-style: dashed;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  margin: 10px;
+  padding: 0 5px;
+  min-height: 200px;
+}
+
+.card-desc img {
+  margin: 0 auto;
+  padding-top: 10px;
+  width: 48px !important;
+}
+
+.card-desc p.larger {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  /*si no se declara añade los ... pero muestra todo el texto*/
+}
+
+/* .card-desc p.larger:hover {
+  -webkit-line-clamp: 5;
+} */
+
+
+
+.col-btn {
+  margin: 10px auto;
+  font-size: 20px;
+}
+
+.card-h {
+  transition: all .3s;
+}
+
+.card-h:hover {
+  transition: all 1s;
+}
+
+.card-h {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.mask-perfil {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(62, 72, 81, 0.6);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.mask-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  color: #000;
+  display: none;
+  transform: rotateY(180deg);
+  padding: 0;
+  -webkit-box-shadow: 4px 0px 13px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 0px 13px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 0px 13px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card-h {
+  flex: 0 0 49% !important;
+}
+
+.perfil-c img {
+  border-radius: 20px;
+}
+
+.perfil-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-conocenos-mas {
+  width: 200px;
+  font-size: 12px !important;
+}
+
+.sede-i {
+  border-top: 0px transparent !important;
+  border: 1px dashed #6CBDB1;
+  margin: 10px 0;
+}
+
+.sede-i h4 {
+  margin-bottom: 0 !important
+}
+
+
+/* Sección facultad */
+.btn-me-interesa {
+  font-size: 20px !important;
+  border: 1px solid var(--blanco);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+
+#banner-facultad-video * {
+  font-size: 150%;
+}
+
+#banner-facultad-video p {
+  font-size: 100%;
+}
+
+.col-izq h6 {
+  font-weight: 300;
+  font-size: 32px !important;
+}
+
+.col-izq h4 {
+  font-size: 30px !important;
+}
+
+.col-izq p {
+  font-size: 14px !important;
+  font-weight: 300 !important;
+}
+
+/* Proceso de admision */
+.card-admision {
+  padding: 20px;
+  border-radius: 20px;
+  margin: 1rem 0;
+  height: 200px !important;
+}
+
+.owl-dots {
+  margin: 0 !important
+}
+
+.card-admision p {
+  font-size: 18px;
+  color: var(--gris);
+  text-align: center;
+}
+
+.card-admision img {
+  width: 96px !important;
+  text-align: center;
+}
+
+.card-admision h4 {
+  font-size: 18px !important;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.card-pregrado {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 0 0 18%;
+  margin: 20px 10px !important;
+  border-radius: 25px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-pregrado img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.pregrado-wrapper {
+  border-top: 2px dashed var(--verde);
+  border-right: 2px dashed var(--verde);
+  border-bottom: 2px dashed var(--verde);
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  width: 75%;
+  padding: 5px 10px;
+}
+
+#cards-pregrado-c .img {
+  width: 25%;
+  background-size: cover;
+}
+
+#cards-pregrado-c .img.psicologia {
+  background-image: url(../img/otros-psicologia.png);
+}
+
+#cards-pregrado-c .img.derecho {
+  background-image: url(../img/otros-derecho.png);
+  background-size: cover;
+
+}
+
+#cards-pregrado-c .img.economia {
+  background-image: url(../img/otros-economia.png);
+  background-size: cover;
+  background-position: center center;
+
+
+}
+#cards-pregrado-c .img.contabilidad {
+  background-image: url(../img/otros-contabilidad.png);
+}
+
+#cards-pregrado-c .img.nutricion {
+  background-image: url(../img/otros-nutricion.png);
+  background-size: cover;
+
+}
+
+#cards-pregrado-c .img.administracion {
+  background-image: url(../img/otros-administracion-empresas.png);
+  background-size: cover;
+  background-position: center center;
+
+
+}
+
+.icon-facultad {
+  width: 16px;
+  height: 16px;
+}
+
+/* Acreditacion */
+
+.bg-verde-wa {
+  background: #199E0F;
+  color: #fff;
+}
+
+
+.logo-h-whatsapp {
+  margin-right: 1rem;
+}
+
+.videollamada-c ul {
+  margin: 0
+}
+
+#img-video-preview {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  max-width: 469px;
+}
+
+#video-facultad {
+  width: 100%;
+  height: 281px;
+
+  max-width: 469px;
+}
+
+
+
+/* mobile query 2 */
+@media screen and (max-width: 576px) {
+  .card-h {
+    flex: 0 0 80% !important;
+    margin: 20px 10%;
+  }
+  .card-desc p.larger{
+    -webkit-line-clamp: unset;
+  }
+  .card-desc p.larger{
+    -webkit-line-clamp: unset;
+  }
+  .pregrado-wrapper h5 {
+    font-size: 16px !important;
+  }
+
+  .videollamada-c ul {
+    font-size: 14px !important;
+    margin: 0
+  }
+
+  .videollamada-c h3 {
+    font-size: 24px !important;
+  }
+
+  .popup {
+    width: 90%;
+    height: 90%;
+  }
+
+  #p-ee-c h2 {
+    font-size: 24px !important;
+    width: 80% !important;
+    margin: 0 5%;
+  }
+
+  #acreditacion h2,
+  #otros-pregrados h3 {
+    font-size: 24px;
+  }
+
+  .online {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 24px !important;
+    text-align: left;
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+
+  .btn-cta-large {
+    width: 50vw !important;
+  }
+
+  /* Banner index */
+  .logo-blanco {
+    left: 20px;
+  }
+
+  .logo-blanco img {
+    height: 40px;
+  }
+
+  .desc-programa h1 {
+    font-size: 30px !important;
+  }
+
+
+
+  #si-desc h6 {
+    font-size: 14px !important;
+  }
+
+  /* Brochure */
+
+  #brochure-c h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  /* Programa semipresencial */
+
+  #programa-semipresencial h5 {
+    font-size: 16px !important;
+  }
+
+  #programa-semipresencial h4 {
+    font-size: 24px !important;
+  }
+
+
+  .sede-i a {
+    font-size: 12px !important;
+  }
+
+  /* Banner facultad */
+
+  #banner-facultad-video h6 {
+    font-size: 18px !important;
+  }
+
+  #banner-facultad-video h4 {
+    font-size: 24px !important;
+  }
+
+  #banner-facultad p {
+    font-size: 16px !important;
+  }
+
+  /* Admision */
+
+  .card-admision h4 {
+    margin-left: 20px;
+    font-size: 18px !important;
+    font-weight: 900;
+  }
+
+  .col-btn {
+    flex: 0 0 100%;
+  }
+
+  #si-desc h6,
+  #si-desc h4 {
+    text-align: center;
+  }
+
+  .videollamada-c {
+    background: var(--gris-claro) !important;
+  }
+
+  .gris-texto {
+    color: var(--gris)
+  }
+
+  .btn-videollamada {
+    width: 100% !important;
+  }
+
+  #logo-footer {
+    width: 50% !important;
+    margin-left: .1rem;
+  }
+
+  .links-col {
+    flex: 0 0 100% !important;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.larger-brochure {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.larger-brochure:hover {
+  -webkit-line-clamp: 100;
+}
+
+/* Tablet  query*/
+@media screen and (min-width: 577px) and (max-width: 991px) {
+  #carousel-banner {
+    background-image: url('../img/banner-derecho-tablet.png') !important ;
+    background-position: 60% 50%
+  }
+  .popup {
+    width: 100%;
+  }
+
+  .card-admision {
+    height: 240px;
+  }
+
+  .btn-qi {
+    font-size: 14px !important;
+  }
+
+  .card-pregrado {
+    min-height: unset !important;
+  }
+
+  .card-pregrado p {
+    font-size: 16px !important;
+  }
+
+  .card-pregrado h6 {
+    font-size: 16px !important;
+  }
+
+  .card-pregrado span {
+    font-size: 12px !important;
+  }
+
+  .btn-postulate {
+    font-size: 20px !important;
+  }
+
+  .card-admision h4 {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .logo-facultad {
+    width: 40% !important;
+  }
+
+
+
+  .videollamada-c h3 {
+    font-size: 24px !important;
+  }
+
+  .links-col {
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex: 0 0 18% !important;
+
+  }
+
+  .links-col a {
+    font-size: 12px;
+  }
+
+  #logo-footer,
+  #logo-footer img {
+    width: 100% !important;
+  }
+
+  .logo-blanco {
+    right: 2vw !important;
+    top: 10px !important;
+  }
+
+  .logo-blanco img {
+    height: 30px !important;
+  }
+
+  .bb-azul {
+    border-bottom: 10px solid var(--azul);
+  }
+
+  .desc-programa p {
+    font-size: 16px;
+  }
+
+  .desc-programa h1 {
+    font-size: 48px !important;
+  }
+
+  .card-desc {
+    flex: 0 0 33% !important;
+  }
+
+  #si-desc h6 {
+    font-size: 12px;
+  }
+
+
+
+  .si-col-izq h4,
+  #si-c h4 {
+    font-size: 24px !important;
+  }
+
+  #programa-semipresencial .row h5,
+  #programa-semipresencial .row h4 {
+    text-align: center;
+  }
+
+  #programa-semipresencial .row h5 {
+    font-size: 16px !important;
+  }
+
+
+  #banner-facultad-video h6 {
+    font-size: 16px !important;
+  }
+
+  #banner-facultad-video h4 {
+    font-size: 24px !important;
+  }
+
+
+  #chat-bubble {
+    position: absolute;
+    right: 5vw;
+    z-index: 1;
+    top: -250px;
+    width: 50px;
+    height: 50px;
+    background: var(--verde) !important;
+    border-radius: 50% !important;
+    padding: 10px;
+  }
+
+
+
+  #brochure-c h2 {
+    font-size: 20px;
+  }
+
+  .col-btn {
+    font-size: 14px !important;
+    margin: 5px 0;
+  }
+
+  .desc-programa {
+    top: 15%;
+    left: 2%;
+    z-index: 99;
+    font-size: calc(1em + 1vw);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .desc-programa p {
+    font-size: 24px;
+  }
+
+  .logo-blanco {
+    top: 3vh !important;
+  }
+
+  .logo-blanco img {
+    height: 60px !important;
+  }
+
+  .sede-i {
+    display: flex !important;
+    flex-direction: column;
+    flex: 0 0 49% !important;
+  }
+
+  .sede-i a {
+    font-size: 14px !important;
+    line-height: 120%
+  }
+}
+
+/* Tablet query 2 */
+@media screen and (min-width: 768px) {
+  .card-desc p.larger {
+    -webkit-line-clamp: unset;
+    /*si no se declara añade los ... pero muestra todo el texto*/
+  }
+  .modal-dialog {
+    max-width: 35vw !important;
+    margin: 1.75rem auto;
+  }
+
+  h1 {
+    font-size: 24px !important;
+    line-height: 100%;
+    margin-bottom: 14px;
+  }
+
+
+  .btn-cta {
+    font-size: 20px !important;
+  }
+
+  .btn-cta-large {
+    width: 23vw;
+  }
+
+
+
+  #acreditacion h2,
+  #otros-pregrados h3 {
+    font-size: 24px !important;
+  }
+
+
+  #brochure-c h2 {
+    font-size: 24px !important;
+  }
+
+  .logo-blanco {
+    right: 15vw !important;
+  }
+
+  .av {
+    font-size: 24px !important;
+  }
+
+  .card-pregrado {
+    min-height: 500px;
+  }
+
+  .logo-h-whatsapp {
+    margin-right: 2rem;
+  }
+
+  .w-49:not(:nth-child(5)) {
+    width: 49% !important;
+  }
+
+
+  .logo-facultad {
+    margin-left: 2.1rem !important;
+    width: 70% !important;
+    margin-bottom: 40px !important;
+  }
+
+  footer p,
+  footer a {
+    font-size: 14px;
+  }
+
+  .card-pregrado p {
+    font-size: 16px;
+  }
+
+  .card-pregrado h6 {
+    font-size: 16px;
+  }
+
+  .card-pregrado span {
+    font-size: 16px;
+  }
+
+  .links-col {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 25% !important;
+  }
+
+  .logo-desktop {
+    flex: 0 0 20%
+  }
+  .logo-desktop img {
+    margin-left: 10px;
+
+  }
+
+  .logo-blanco {
+    top: 10px;
+    right: 3vw;
+  }
+
+  .logo-blanco img {
+    margin: 0;
+    padding: 0;
+    height: 80px !important;
+  }
+
+  .links-col.contactanos {
+    flex: 0 0 10%;
+  }
+
+  #chat-bubble {
+    position: absolute;
+    top: -25%;
+    z-index: 1000;
+    right: 3%;
+    background-color: var(--verde);
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  .card-desc {
+    border: 1px solid var(--verde);
+    border-style: dashed;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 0 0 29%;
+  }
+  .card-desc h6 {
+    font-size: 18px;
+  }
+  .card-desc p {
+    font-size: 14px !important;
+  }
+
+  .card-desc img {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 24px;
+    height: auto;
+
+  }
+
+  .pa-title {
+    font-size: 32px !important;
+  }
+
+  .btn-postulate {
+    font-size: 30px;
+  }
+
+
+
+  #si-c p {
+    font-size: 17px;
+  }
+
+  #si-desc h6 {
+    font-size: 18px;
+  }
+
+  #programa-semipresencial h4 {
+    font-size: 24px !important;
+  }
+
+
+  .w-49 {
+    width: 100% !important;
+  }
+
+
+
+
+  .card-h * {
+    font-size: 20px;
+  }
+
+  .btn-me-interesa {
+    flex: 0 0 70%;
+    text-align: center;
+  }
+
+  .videollamada-c p,
+  .videollamada-c ul {
+    font-size: 14px !important;
+  }
+
+  .links-col.footer {
+    flex: 0 0 17% !important;
+  }
+
+  .links-col.nosotros {
+    flex: 0 0 23% !important
+  }
+}
+
+
+/* Laptop query */
+@media screen and (min-width: 992px) {
+  #contenedor-titulo {
+    margin-top: -30%
+  }
+  
+
+  .ic-class-form-link {
+    color: var(--blanco);
+    font-weight: 700;
+  }
+
+  .card-admision {
+    font-size: 18px !important;
+    height: 180px !important;
+  }
+  #carousel-banner {
+    height: 80vh !important;
+    background-image: url('../img/Banner_derecho.png') !important ;
+    background-position: right top !important;
+  }
+
+  #programa-semipresencial img {
+    padding: 0.2rem
+  }
+
+
+
+  #acreditacion h2,
+  #otros-pregrados h3 {
+    font-size: 32px !important;
+  }
+
+  .av {
+    font-size: 32px !important;
+  }
+
+
+  #programa-semipresencial h4 {
+    font-size: 32px !important;
+  }
+
+  h1 {
+    font-size: 32px !important;
+    line-height: 100%;
+    margin-bottom: 14px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+
+
+  #si-c h4 {
+    font-size: 32px;
+  }
+
+  .logo-blanco img {
+    margin: 0;
+    padding: 0;
+    height: 80px !important;
+  }
+
+
+
+  .btn-cta {
+    font-size: 24px !important;
+  }
+
+
+  .desc-programa {
+    left: 10px
+  }
+
+  .desc-programa h2 {
+    font-size: 60px !important;
+  }
+
+  .desc-programa p {
+    font-size: 24px !important;
+  }
+
+  .logo-facultad {
+    width: 100% !important;
+    margin-bottom: 40px !important;
+    margin-left: 0rem !important;
+  }
+
+  .card-h h4 {
+    font-size: 30px !important;
+  }
+
+  .card-h * {
+    font-size: 12px;
+  }
+
+  #brochure-c h2 {
+    font-size: 32px !important;
+  }
+
+
+
+  #brochure-c .col-btn {
+    flex: 0 0 100% !important;
+    font-size: 24px;
+    margin: 10px !important;
+  }
+
+  .sede-i a {
+    font-size: 16px !important;
+    margin: 10px;
+  }
+
+  .icon-facultad {
+    width: 18px;
+    height: 18px;
+  }
+
+  .col-izq p {
+    font-size: 18px !important;
+    font-weight: 300 !important;
+  }
+
+  .videollamada-c h3 {
+    font-size: 24px !important;
+    width: 100%;
+  }
+
+  .videollamada-c p,
+  .videollamada-c ul,
+  .videollamada-c .btn {
+    font-size: 20px !important;
+  }
+
+
+
+  .card-desc img {
+    width: 32px !important;
+  }
+
+  #brochure-c .btn {
+    font-size: 24px !important;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #img-video-preview, #video-facultad {
+    width: 100%;
+    cursor: pointer;
+    max-width: 800px;
+  }
+}

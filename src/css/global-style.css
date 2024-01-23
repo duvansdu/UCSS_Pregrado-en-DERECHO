@@ -1,0 +1,29 @@
+.laboral-item h3 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.laboral-item img {
+    height: 48px !important;
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
+}
+.laboral-item p {
+    text-align: center;
+    font-size: 24px !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .laboral-item h3 {
+        font-size: 16px;
+    }
+    .laboral-item img {
+        height: 16px;
+    }
+    .laboral-item p {
+        text-align: center;
+        font-size: 14px !important;
+    }
+
+}
